@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CMS.Models.PCMember>
+
+
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<input type="button" value="Conferences" class="btn btn-primary" onclick="@("window.location.href='" + Url.Action("index","conferences") + "'");" />
+
+<input type="button" value="Comitees" class="btn btn-primary" onclick="@("window.location.href='" + Url.Action("index","comitees") + "'");" />
+
+<input type="button" value="Reviews" class="btn btn-primary" onclick="@("window.location.href='" + Url.Action("index","reviews") + "'");" />

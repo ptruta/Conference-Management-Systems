@@ -1,0 +1,64 @@
+@model CMS.ViewModels.CallForPapersViewModels.DeleteCallForPapersViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CallForPapers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.callforpaper.Acronym)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.callforpaper.Acronym)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.callforpaper.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.callforpaper.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.callforpaper.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.callforpaper.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.callforpaper.DeadlineAbstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.callforpaper.DeadlineAbstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.callforpaper.DeadlineProposal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.callforpaper.DeadlineProposal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
